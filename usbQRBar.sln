@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "device", "device\device.csproj", "{68153CE7-7C11-4238-A58F-8EF497BB3772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "libusb", "libusb\libusb.csproj", "{830FCF8D-D8F3-4BAB-8129-AA72D850DDA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HookGlobal", "HookGlobal\HookGlobal.csproj", "{9AC61493-7367-499E-8620-D0D6BD3D2FA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68153CE7-7C11-4238-A58F-8EF497BB3772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68153CE7-7C11-4238-A58F-8EF497BB3772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68153CE7-7C11-4238-A58F-8EF497BB3772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68153CE7-7C11-4238-A58F-8EF497BB3772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830FCF8D-D8F3-4BAB-8129-AA72D850DDA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830FCF8D-D8F3-4BAB-8129-AA72D850DDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830FCF8D-D8F3-4BAB-8129-AA72D850DDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830FCF8D-D8F3-4BAB-8129-AA72D850DDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC61493-7367-499E-8620-D0D6BD3D2FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC61493-7367-499E-8620-D0D6BD3D2FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC61493-7367-499E-8620-D0D6BD3D2FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC61493-7367-499E-8620-D0D6BD3D2FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
