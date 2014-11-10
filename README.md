@@ -1,0 +1,4 @@
+usbQRbar
+========
+
+get usbQRbar string
