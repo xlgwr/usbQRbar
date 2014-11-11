@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Header>
+  <Field>
+    <Name>DATECODE</Name>
+    <Prefix>D1;d2;d3;d4;</Prefix>
+    <Seperator />
+    <Index />
+  </Field>
+  <Field>
+    <Name>MFGRPART</Name>
+    <Prefix>PKOA+</Prefix>
+    <Seperator />
+    <Index />
+  </Field>
+  <Field>
+    <Name>RECQTY</Name>
+    <Prefix>Q</Prefix>
+    <Seperator />
+    <Index />
+  </Field>
+  <Field>
+    <Name>MFGDATE</Name>
+    <Prefix />
+    <Seperator />
+    <Index />
+  </Field>
+  <Field>
+    <Name>EXPIREDATE</Name>
+    <Prefix />
+    <Seperator />
+    <Index />
+  </Field>
+  <Field>
+    <Name>LOTNUMBER</Name>
+    <Prefix />
+    <Seperator />
+    <Index />
+  </Field>
+  <type>GENERAL</type>
+  <twodseperator />
+</Header>

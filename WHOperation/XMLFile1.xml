@@ -1,0 +1,44 @@
+﻿<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:rs="urn:schemas-microsoft-com:rowset" xmlns:z="#RowsetSchema">
+  <s:Schema id="RowsetSchema">
+    <s:ElementType name="row" content="eltOnly">
+      <s:AttributeType name="t_dn" rs:number="1" />
+      <s:AttributeType name="t_deli_date" rs:number="2">
+      </s:AttributeType>
+      <s:AttributeType name="t_rir" rs:number="3" />
+      <s:AttributeType name="t_part" rs:number="4" />
+      <s:AttributeType name="t_po" rs:number="5" />
+      <s:AttributeType name="t_site" rs:number="6" />
+      <s:AttributeType name="t_qty" rs:number="7" />
+      <s:AttributeType name="t_supp" rs:number="8" />
+      <s:AttributeType name="t_mfgr" rs:number="9" />
+      <s:AttributeType name="t_mfgr_part" rs:number="10" />
+      <s:AttributeType name="t_id" rs:number="11" />
+      <s:AttributeType name="t_urg" rs:number="12" />
+      <s:AttributeType name="t_loc" rs:number="13" />
+      <s:AttributeType name="t_msd" rs:number="14" />
+      <s:AttributeType name="t_cust_part" rs:number="15" />
+      <s:AttributeType name="t_shelf_life" rs:number="16" />
+      <s:AttributeType name="t_wt" rs:number="17" />
+      <s:AttributeType name="t_wt_ind" rs:number="18" />
+      <s:AttributeType name="t_conn" rs:number="19" />
+      <s:extends type="rs:rowbase" />
+    </s:ElementType>
+  </s:Schema>
+  <rs:data>
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131694" t_part="50ws1-6493-008r1f1" t_po="10639357" t_site="MG8000" t_qty="18000" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B2P3-VH(LF)" t_id="1" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="WS1-6493-000" t_shelf_life="1" t_wt="0.7" t_wt_ind="*06*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131693" t_part="50vs1-8118-002r1f1" t_po="10639357" t_site="MG8000" t_qty="5000" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B2P-VH(LF)(SN)" t_id="2" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-8118-002" t_shelf_life="1" t_wt="0.48" t_wt_ind="*10*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131691" t_part="50vs1-8092-004r1f1" t_po="10639357" t_site="MG8000" t_qty="45696" t_supp="JSTC" t_mfgr="jaso00" t_mfgr_part="B04B-CZHK-B-1(LF)(SN)" t_id="3" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-8092-004" t_shelf_life="1" t_wt="0.227" t_wt_ind="*07*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131692" t_part="50vs1-8092-005r1f1" t_po="10639357" t_site="MG8000" t_qty="19992" t_supp="JSTC" t_mfgr="jaso00" t_mfgr_part="B05B-CZHK-B-1(LF)(SN)" t_id="4" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-8092-005" t_shelf_life="1" t_wt="0.265" t_wt_ind="*07*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131695" t_part="50ws1-6803-000r1f1" t_po="10639357" t_site="MG8000" t_qty="3500" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B2P4-VH-B(LF)(SN)" t_id="5" t_urg="no" t_loc="A2" t_msd="" t_cust_part="WS1-6803-000" t_shelf_life="1" t_wt="0.88" t_wt_ind="*10*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131696" t_part="50vs1-7060-006r1f1" t_po="10641044" t_site="MG8000" t_qty="1008" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B06B-CZHK-B-1LF" t_id="6" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-7060-006" t_shelf_life="1" t_wt="0.3" t_wt_ind="*06*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="NA" t_part="50vs1-7074-006r1f1" t_po="10641044" t_site="MG8000" t_qty="0" t_supp="JSTC" t_mfgr="JSTT00" t_mfgr_part="B06B-XASK-1-A(LF)" t_id="7" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-7074-006" t_shelf_life="1" t_wt="0.625" t_wt_ind="*05*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131698" t_part="50vs1-7074-006r1f1" t_po="10641044" t_site="MG8000" t_qty="3200" t_supp="JSTC" t_mfgr="JSTT00" t_mfgr_part="B06B-XASK-1-A(LF)" t_id="8" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-7074-006" t_shelf_life="1" t_wt="0.625" t_wt_ind="*05*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131699" t_part="50vs1-8906-002r1f1" t_po="10642366" t_site="MG8000" t_qty="3000" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B2P-VH-B(LF)(SN)" t_id="9" t_urg="no" t_loc="" t_msd="" t_cust_part="VS1-8906-002" t_shelf_life="1" t_wt="0.57" t_wt_ind="*11*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131685" t_part="50vs1-6016-002r1f1" t_po="10639357" t_site="MG8000" t_qty="1800" t_supp="JSTC" t_mfgr="JSTT00" t_mfgr_part="B02P-VL" t_id="10" t_urg="no" t_loc="ja2" t_msd="" t_cust_part="VS1-6016-002" t_shelf_life="1" t_wt="1.496" t_wt_ind="*08*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131686" t_part="50vs1-7063-026r1f1" t_po="10639357" t_site="MG8000" t_qty="560" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B26B-CZWHK-B-1LF" t_id="11" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-7063-026" t_shelf_life="1" t_wt="1.32" t_wt_ind="*09*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131687" t_part="50vs1-7074-003r1f1" t_po="10639357" t_site="MG8000" t_qty="400" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B03B-XASK-1-A(LF)" t_id="12" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-7074-003" t_shelf_life="1" t_wt="0.38" t_wt_ind="*09*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131688" t_part="50vs1-7074-006r1f1" t_po="10639357" t_site="MG8000" t_qty="2800" t_supp="JSTC" t_mfgr="JSTT00" t_mfgr_part="B06B-XASK-1-A(LF)" t_id="13" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-7074-006" t_shelf_life="1" t_wt="0.625" t_wt_ind="*05*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131689" t_part="50vs1-7475-002r1f1" t_po="10639357" t_site="MG8000" t_qty="13000" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B2B-PH-K-S(LF)" t_id="14" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-7475-002" t_shelf_life="1" t_wt="0.11" t_wt_ind="*08*" t_conn="CON002" />
+    <z:row t_dn="205084" t_deli_date="8/13/2012" t_rir="B1208131690" t_part="50vs1-7748-002r1f1" t_po="10639357" t_site="MG8000" t_qty="8000" t_supp="JSTC" t_mfgr="JASO00" t_mfgr_part="B2B-PH-K-S(LF)(SN)" t_id="15" t_urg="no" t_loc="JA2" t_msd="" t_cust_part="VS1-7748-002" t_shelf_life="1" t_wt="0.12" t_wt_ind="*11*" t_conn="CON002" />
+  </rs:data>
+</xml>

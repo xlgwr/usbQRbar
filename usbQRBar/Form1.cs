@@ -72,7 +72,7 @@ namespace usbQRBar
             try
             {
                 //如果不是默认的COM1端口，这里需要传入端口号
-                rsp = new RevSerialPort("COM3");
+                rsp = new RevSerialPort("COM1");
                 rsp.Start();
                 //usb
                // BarCode.Start();
@@ -97,6 +97,11 @@ namespace usbQRBar
             {
                 MessageBox.Show("条码长度：" + textBox6.Text.Length + "\n条码内容：" + textBox6.Text, "系统提示");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

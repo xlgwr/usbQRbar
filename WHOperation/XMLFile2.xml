@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Header>
+  <Field>
+    <Name>LOTNUMBER</Name>
+    <Prefix>LL</Prefix>
+  </Field>
+  <Field>
+    <Name>QTY</Name>
+    <Prefix>LQ</Prefix>
+  </Field>
+  <type>Single</type>
+</Header>
