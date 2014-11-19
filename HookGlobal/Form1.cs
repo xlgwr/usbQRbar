@@ -40,6 +40,7 @@ namespace HookGlobal
 
             if (e.KeyData == Keys.Enter)
             {
+               
                 var arr = getQRcode.Split('\n');
                 foreach (var arrNext in arr)
                 {
@@ -57,7 +58,6 @@ namespace HookGlobal
                 }
 
             }
-
         }
 
         void kbh_OnKeyPressEvent(object sender, KeyPressEventArgs e)
@@ -83,8 +83,13 @@ namespace HookGlobal
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //getQRcode = "";
             textBox1.Text = "";
             listBox1.Items.Clear();
+            _strlit.Clear();
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
         }
 
         private void textBox2_Enter(object sender, EventArgs e)

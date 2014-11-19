@@ -14,6 +14,7 @@ namespace HookGlobal
         frm0Main _frm0main;
         Control _cl;
         string _strtmp;
+        bool _changeSelectp;
         public frmList()
         {
             InitializeComponent();
@@ -48,9 +49,14 @@ namespace HookGlobal
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBox1.SelectedItem==null)
+            {
+                return;
+            }
             //MessageBox.Show(listBox1.SelectedItem.ToString());
             if (string.IsNullOrEmpty(_cl.Text))
             {
+                _strtmp = "";
                 _cl.Text = listBox1.SelectedItem.ToString();
             }
             else
@@ -58,15 +64,24 @@ namespace HookGlobal
                 _strtmp = _cl.Text;
                 _cl.Text = listBox1.SelectedItem.ToString();
             }
+            _changeSelectp = true;
         }
 
         private void frmList_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!string.IsNullOrEmpty(_strtmp))
+            if (_changeSelectp)
             {
-                _frm0main._strlit.Remove(_strtmp);
+                if (!string.IsNullOrEmpty(_strtmp))
+                {
+                    _frm0main._strlit.Remove(_strtmp);
+                    _strtmp = "";
+                }
+                _frm0main._strlit.Add(_cl.Text);
             }
-            _frm0main._strlit.Add(_cl.Text);
+            else
+            {
+                _changeSelectp = false;
+            }
         }
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
