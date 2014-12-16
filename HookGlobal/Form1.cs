@@ -13,8 +13,12 @@ namespace HookGlobal
     public partial class frm0Main : Form
     {
         public static string getQRcode = "";
+        public int _firstOpenSelectList;
 
         public List<string> _strlit = new List<string>();
+        public List<string> _strNoPrefixlit { get; set; }
+        public List<string> _strNoPrefixlitTmp { get; set; }
+
         public static List<prefixContent> _prefixcontList;
 
         KeyBordHook kbh;
@@ -23,6 +27,8 @@ namespace HookGlobal
         {
             InitializeComponent();
             this.AcceptButton = button1;
+            _strNoPrefixlit = new List<string>();
+            _strNoPrefixlitTmp = new List<string>();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,18 +67,9 @@ namespace HookGlobal
                         {
                             if (!listBox1.Items.Contains(item))
                             {
-                                listBox1.Items.Add(item);
-
                                 //
-                                foreach (var fc in _prefixcontList)
-                                {
-                                    if (item.StartsWith(fc._prefix,true,null))
-                                    {
-                                        fc._cl.Text = item.Substring(fc._prefix.Length);
-                                        _strlit.Add(item);
-                                    }
-                                }
-
+                                getPrefixOfContent(item);
+                                listBox1.Items.Add(item);
                             }
                         }
                     }
@@ -80,7 +77,32 @@ namespace HookGlobal
 
             }
         }
-
+        public string getPrefixOfContent(string item)
+        {
+            foreach (var fc in _prefixcontList)
+            {
+                if (item.StartsWith(fc._prefix, true, null))
+                {
+                    fc._cl.Text = item.Substring(fc._prefix.Length);
+                    //_strlit.Add(item);
+                    return fc._cl.Text;
+                }
+            }
+            _strNoPrefixlitTmp.Add(item);
+            return item;
+        }
+        public string setPrefixForContent(string prefix)
+        {
+            foreach (var item in listBox1.Items)
+            {
+                var fc = item.ToString();
+                if (fc.StartsWith(prefix, true, null))
+                {
+                    return fc.Substring(prefix.Length);
+                }
+            }
+            return "";
+        }
         void kbh_OnKeyPressEvent(object sender, KeyPressEventArgs e)
         {
             getQRcode += e.KeyChar;
@@ -108,9 +130,12 @@ namespace HookGlobal
             textBox1.Text = "";
             listBox1.Items.Clear();
             _strlit.Clear();
+            _strNoPrefixlit.Clear();
+            _strNoPrefixlitTmp.Clear();
             txt00_Content.Text = "";
             txt01_Content.Text = "";
             txt02_Content.Text = "";
+            txt03_Content.Text = "";
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
@@ -121,6 +146,9 @@ namespace HookGlobal
         private void textBox1_Enter(object sender, EventArgs e)
         {
             getQRcode = "";
+            _strNoPrefixlit.Clear();
+            _strNoPrefixlitTmp.Clear();
+
         }
 
         private void txt0Divide_TextChanged(object sender, EventArgs e)
@@ -130,44 +158,78 @@ namespace HookGlobal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmList fl = new frmList(this, txt00_Content);
-            fl.ShowDialog();
+            ShowFrmlist(txt00_Content, txt0_Prefix);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmList fl = new frmList(this, txt01_Content);
-            fl.ShowDialog();
+            ShowFrmlist(txt01_Content, txt1_Prefix);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmList fl = new frmList(this, txt02_Content);
-            fl.ShowDialog();
+            ShowFrmlist(txt02_Content, txt2_Prefix);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmList fl = new frmList(this, txt03_Content);
-            fl.ShowDialog();
+            ShowFrmlist(txt03_Content, txt3_Prefix);
         }
-
-
-        private void removeExistCl(Control prefix, Control cl)
+        public void ShowFrmlist(Control cl1_content, Control cl2_prefix)
         {
+            getQRcode = "";
+            _strlit.Clear();
+            _firstOpenSelectList += 1;
+
+            for (int i = 0; i < listBox1.Items.Count; i++)
+            {
+                string item = listBox1.Items[i].ToString();
+                if (string.IsNullOrEmpty(cl2_prefix.Text))
+                {
+                    _strlit.Add(item);
+                    for (int j = 0; j < _prefixcontList.Count; j++)
+                    {
+                        if (item.StartsWith(_prefixcontList[j]._prefix, true, null))
+                        {
+                            _strlit.Remove(item);
+                            break;
+                        }
+                    }
+
+                }
+                else if (item.StartsWith(cl2_prefix.Text, true, null))
+                {
+                    _strlit.Add(item);
+                }
+            }
+            frmList fl = new frmList(this, cl1_content, cl2_prefix);
+            fl.ShowDialog();
+        } 
+
+        private void removeExistCl(Control prefix, Control cl_content)
+        {
+            getQRcode = "";
             for (int i = 0; i < _prefixcontList.Count; i++)
             {
-                if (_prefixcontList[i]._cl==cl)
+                if (_prefixcontList[i]._cl == cl_content)
                 {
                     _prefixcontList.RemoveAt(i);
                 }
             }
             if (!string.IsNullOrEmpty(prefix.Text))
             {
+                //  
+                cl_content.Text = setPrefixForContent(prefix.Text);
+                _prefixcontList.Add(new prefixContent { _prefix = prefix.Text.Trim(), _cl = cl_content });
 
-                _prefixcontList.Add(new prefixContent { _prefix = prefix.Text.Trim(), _cl = cl });
             }
-            getQRcode = "";
+            else
+            {
+                cl_content.Text = "";
+            }
+
+
         }
         private void txt0_Prefix_TextChanged(object sender, EventArgs e)
         {
